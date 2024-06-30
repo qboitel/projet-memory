@@ -1,0 +1,7 @@
+{
+    "name": "Memory vueJS PWA",
+    "short_name": "Memory",
+    "description": "Une appli de memory en PWA pour le fun :) ",
+    "display": "standalone",
+    "start_url": "/"
+  }

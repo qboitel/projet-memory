@@ -1,61 +1,33 @@
-# intro
+# Projet Memory
 
-This template should help get you started developing with Vue 3 in Vite.
+## Déploiement du projet
 
-## Recommended IDE Setup
+Pour déployer le projet, il faut au préalable le cloner sur votre machine locale avec la commande suivante :
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```bash
+git clone git@github.com/qboitel/projet-memory.git
 ```
 
-### Compile and Hot-Reload for Development
+Ensuite, il faut avoir NodeJS et npm installés sur votre machine puis taper la commande suivante dans le dossier cloné :
 
-```sh
-npm run dev
+```bash
+npm install && npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Il suffit ensuitre de se rendre à l'URL suivante : http://localhost:5173/
 
-```sh
-npm run build
-```
+## Fonctionnalités implémentées
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Dans ce projet, il est demandé d'implémenter des fonctionnalités de mémorisation des informations renseignées par l'utilisateur. Cette fonctionnalité a bien été implémentée.
 
-```sh
-npm run test:unit
-```
+De plus, il est demandé de fournir une fonctionnalité de révision, il faut pouvoir réviser les cartes selectionnées à partir d'un thème, d'une catégorie et d'un niveau donné. Cette fonctionnalitée a été implémentée.
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+Il est également demandé de pouvoir utiliser l'application en mode hors-ligne. Cette fonctionnalité a été implementée.
 
-```sh
-npm run test:e2e:dev
-```
+## Organisation du code et des composants
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
+L'application présente un router, que l'on trouve dans le fichier index.ts du dossier router.
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+Par la suite, on retrouve un dossier views qui présente les vues de l'application, ces vues utilisent les composants du dossier components.
 
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Ce dossier components regroupe les composants spécifiques à des catégories de vues. On retrouve donc des dossiers cards, categories et themes avec pour chacun les composants des vues du même nom.
